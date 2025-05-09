@@ -2,7 +2,6 @@
 
 const express = require('express');
 const cors = require('cors');
-app.use(cors({ origin: 'https://gcp-admin-tau.vercel.app' }));
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
@@ -14,7 +13,7 @@ const { CloudinaryStorage } = require('multer-storage-cloudinary');
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({ origin: 'https://gcp-admin-tau.vercel.app' }));
 app.use(bodyParser.json());
 
 mongoose.connect(process.env.MONGO_URI, {
