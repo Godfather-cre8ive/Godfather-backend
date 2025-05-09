@@ -2,6 +2,7 @@
 
 const express = require('express');
 const cors = require('cors');
+app.use(cors({ origin: 'https://gcp-admin-tau.vercel.app' }));
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
